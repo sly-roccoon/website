@@ -66,6 +66,9 @@ h3 {
     padding:5em 3em 5em;
     font-family: 'Sono', sans-serif;
     font-weight: normal;
+
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 body {
@@ -95,10 +98,40 @@ body {
 
 #cv {
     background-color: #a5cd0030;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    li {
+        display: inline-block;
+        /* Allows wrapping in flex container */
+        width: 5em;
+        height: 5em;
+        border-radius: 10%;
+        overflow: wrap;
+    }
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 #projects {
     background-color: #91008530;
+}
+
+.project {
+    margin-bottom: 2em;
 }
 
 #photos {
@@ -106,12 +139,13 @@ body {
 }
 
 a {
-    color: #0077cc;
+    color: #222;
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #55ff00;
+    text-decoration: none;
 }
 
 button {

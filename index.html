@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>[ Aron | Rocco ]</title>
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
 
 </head>
+
 <body>
     <header>
         <h1>Aron | Rocco</h1>
@@ -33,8 +36,9 @@
                 "pictures/me/5.jpg",
                 "pictures/me/6.jpg",
                 "pictures/me/7.jpg",
+                "pictures/me/8.jpg"
             ];
-            document.getElementById('me-img').onclick = function() {
+            document.getElementById('me-img').onclick = function () {
                 let current = this.src.split('/').pop();
                 let next;
                 do {
@@ -48,38 +52,108 @@
     <section class="segment" id="cv">
         <h2>the things i am capable of...</h2>
         <ul>
-            <li><strong>Education:</strong> Example University, BSc Computer Science</li>
-            <li><strong>Experience:</strong> Web Developer at ExampleCorp</li>
-            <li><strong>Skills:</strong> HTML, CSS, JavaScript, React</li>
+            <li><img class="skill" src="icons/skills/cpp.svg" alt="C++"></li>
+            <li><img class="skill" src="icons/skills/python.svg" alt="Python"></li>
+            <li><img class="skill" src="icons/skills/godot.svg" alt="Godot"></li>
+            <li><img class="skill" src="icons/skills/matlab.svg" alt="Matlab"></li>
+            <li><img class="skill" src="icons/skills/arduino.svg" alt="Electronics"></li>
+            <li><img class="skill" src="icons/skills/reaper.svg" alt="Reaper"></li>
+            <li><img class="skill" src="icons/skills/ambisonics.svg" alt="Ambisonics"></li>
+            <li><img class="skill" src="icons/skills/supercollider.svg" alt="Supercollider"></li>
+            <li><img class="skill" src="icons/skills/puredata.svg" alt="Pure Data"></li>
+            <li><img class="skill" src="icons/skills/mixing.svg" alt="Mixing"></li>
+            <li><img class="skill" src="icons/skills/blender.svg" alt="Blender"></li>
+            <li><img class="skill" src="icons/skills/davinci.svg" alt="DaVinci Resolve"></li>
+            <li><img class="skill" src="icons/skills/affinity_designer.svg" alt="Affinity Software"></li>
         </ul>
     </section>
 
     <section class="segment" id="projects">
+
         <h2>the things i made...</h2>
-        <div style="margin-bottom:40px;">
-            <h3>Project One</h3>
-            <p>Description of project one.</p>
+        <div class="project">
+            <h3><a href="https://git.iem.at/aronpetritz/gemupg/-/releases">gemuPG</a></h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 24px;">
+                <div style="flex: 1 1 300px; min-width: 200px;">
+                    <p>I created a polymetric, polyrhytmic, microtonal music making software thingy! I wanted to
+                        encourage new instrumental idioms in software-based sound creation/exploration. gemuPG is coded
+                        in C++ using SDL3 and Dear ImGui and its source code is available on <u><a
+                                href="https://git.iem.at/aronpetritz/gemupg/-/releases">the IEM GitLab</a></u>.<br>
+                        The project was presented as a poster presentation at AES Europe 2025 and made second place at
+                        the <u><a
+                                href="https://www.linkedin.com/posts/christoph-thompson-374b1710a_congratulations-to-the-winners-of-the-2025-activity-7345572937942409216-5oOI?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADt7FlgBUcxsUX4CF-ALYNQPVwczb7qtyss">2025
+                                Saul Walker Design Competition</a></u>.<br>My bachelor thesis is available <u><a
+                                href="documents/gemupg.pdf">here</a></u>, but I'm still developing this further, I
+                        swear!</p>
+                </div>
+                <div style="flex: 1 1 300px; min-width: 200px;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ELWNNCeIu0Q?si=1z354XCZuFH2h3CD"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
-        <div style="margin-bottom:40px;">
-            <h3>Project Two</h3>
-            <p>Description of project two.</p>
+
+
+        <div class="project">
+            <h3>Electroaxolotl</h3>
+            Inspired by the game Electroplantkon for the Nintendo DS I created a three dimensional sound sandbox. You
+            can shoot sound particles that, depending on the type, either play continouous sounds or only play a
+            percussive sound on collision. The sound particles' pitch is determined by their speed, their 'harmonic
+            richness' is controlled by size. Additionally, the particles' lifetime can be controlled. All parameters can
+            also be randomised when firing. Lastly, additional collisiders can be placed with a separate selectable
+            tool. The sound particles are encoded via ambisonics allowing for immersive playback in a variety of setups.
+            <br>
+            I made this in Godot, where I send OSC messages to SuperCollider, which makes the sound synthesis magic
+            happen. SuperCollider outputs 3rd order ambisonics data to Reaper via ReaRoute, where any decoder can be
+            chosen for output.
+            <div style="display: flex; justify-content: center; padding:2em">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ELWNNCeIu0Q?si=1z354XCZuFH2h3CD"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <div class="project">
+            <h3>Die DruckerIdee [in progress]</h3>
+            <p>
+                A project made in Pure Data with Luca Candussi and Maximilian Helligrath.<br>
+                We deterministically convert audio to an image and back again. A CD quality audio file is taken and each
+                16 Bit sample converted into 2/3 of a pixel (two 8 Bit colour channels). Thus, three samples make up two
+                pixels of an image. This is repeated in a spiral pattern for a 144x255 pixel image. After this, the
+                image can be losslessly converted back to an audio file. We want to show the lossiness of conversion
+                through different colour spaces, as well as perception through air. Nothing is colour accurate and this
+                can be sonically perceived through the distortion of the original file, which is re-scanned with a
+                camera recording different screens. (LCD, CRT, projector, etc.)
+                Pure Data externals utilising OpenCV for automatic crop and deskew were programmed.
+            </p>
         </div>
         <!-- Add more project segments as needed -->
     </section>
 
     <section class="segment" id="photos">
         <h2>the things i captured...</h2>
-        
+
     </section>
-    
+
     <section class="segment" id="contact">
         <h2>the things i can be contacted on...</h2>
         <p>Email: <a href="mailto:info@aronrocco.at">info@aronrocco.at</a></p>
     </section>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
