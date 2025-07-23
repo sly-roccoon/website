@@ -1,0 +1,128 @@
+/* Basic CSS Template */
+
+@font-face {
+    font-family: 'Ruska Display';
+    src: url('fonts/RuskaDisplay-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sono';
+    src: url('fonts/sono/Sono-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sono';
+    src: url('fonts/sono/Sono-ExtraLight.woff2') format('woff2');
+    font-weight:lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sono';
+    src: url('fonts/sono/Sono-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+header {
+    text-align:center;
+    width: 100%;
+    padding: 5em 0 3em 0;
+    background: #7300ff;
+    color: #ffc200;
+
+    background-image: url('textures/baked_beans.jpg');
+    background-blend-mode: color-burn;
+}
+
+header h1 {
+    font-family: 'Ruska Display', serif;
+    font-size: 5em;
+    text-shadow: #ffc200 0 0 2px, #ffc200 0 0 2px, #ffc200 0 0 10px;
+}
+
+h2 {
+    font-family: 'Sono', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5em;
+    color: #7400FF;
+    margin-bottom: .5em;
+
+    text-shadow: #005fa3 2px 3px;
+}
+
+h3 {
+    font-family: 'Sono', sans-serif;
+    font-weight: bold;
+    text-decoration: overline underline;
+}
+
+.segment {
+    padding:5em 3em 5em;
+    font-family: 'Sono', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Sono', sans-serif;
+    margin: 0;
+    background-image: url('textures/coffee.jpg');
+    background-blend-mode: darken;
+    color: #222;
+    line-height: 2;
+}
+
+#me-img {
+    width: 50%;
+    height:50%;
+    cursor:pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    box-shadow: #d9ff00 0 0 10px, #00d9ff 0 0 20px, #ff0000 0 0 30px;
+}
+
+#me-img:active {
+    transform: rotate(360deg);
+    transition: .5s;
+}
+
+#cv {
+    background-color: #a5cd0030;
+}
+
+#projects {
+    background-color: #91008530;
+}
+
+#photos {
+    background-color: #00914130;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background: #0077cc;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005fa3;
+}
