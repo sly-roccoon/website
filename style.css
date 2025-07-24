@@ -17,7 +17,7 @@
 @font-face {
     font-family: 'Sono';
     src: url('fonts/sono/Sono-ExtraLight.woff2') format('woff2');
-    font-weight:lighter;
+    font-weight: lighter;
     font-style: normal;
 }
 
@@ -29,9 +29,9 @@
 }
 
 header {
-    text-align:center;
+    text-align: center;
     width: 100%;
-    padding: 5em 0 3em 0;
+    padding: 8em 0 5em 0;
     background: #7300ff;
     color: #ffc200;
 
@@ -42,7 +42,7 @@ header {
 header h1 {
     font-family: 'Ruska Display', serif;
     font-size: 5em;
-    text-shadow: #ffc200 0 0 2px, #ffc200 0 0 2px, #ffc200 0 0 10px;
+    text-shadow: #ffc200 0 0 2px, #ffc200 0 0 5px, #ffc200 0 0 15px;
 }
 
 h2 {
@@ -51,7 +51,7 @@ h2 {
     text-align: center;
     font-size: 2.5em;
     color: #7400FF;
-    margin-bottom: .5em;
+    margin-bottom: 1em;
 
     text-shadow: #005fa3 2px 3px;
 }
@@ -63,7 +63,7 @@ h3 {
 }
 
 .segment {
-    padding:5em 3em 5em;
+    padding: 5em 3em 5em;
     font-family: 'Sono', sans-serif;
     font-weight: normal;
 
@@ -81,9 +81,9 @@ body {
 }
 
 #me-img {
-    width: 50%;
-    height:50%;
-    cursor:pointer;
+    width: 30rem;
+    height: 30rem;
+    cursor: pointer;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -118,7 +118,7 @@ body {
         border-radius: 10%;
         overflow: wrap;
     }
-    
+
     img {
         width: 100%;
         height: 100%;
@@ -138,6 +138,41 @@ body {
     background-color: #00914130;
 }
 
+#contact {
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 5em;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    li {
+        display: inline-block;
+        /* Allows wrapping in flex container */
+        width: 4em;
+        height: 4em;
+        overflow: wrap;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 2em 0;
+    background: #222;
+    color: #fff;
+}
+
 a {
     color: #222;
     text-decoration: none;
@@ -146,6 +181,13 @@ a {
 a:hover {
     color: #55ff00;
     text-decoration: none;
+}
+
+.custom-carousel {
+    width: 35rem;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 button {

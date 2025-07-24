@@ -1,0 +1,9 @@
+# Serve SVG files with the correct MIME type
+AddType image/svg+xml .svg .svgz
+AddEncoding gzip .svgz
+
+# Allow access to SVG files
+<FilesMatch "\.(svg|svgz)$">
+    Header set Content-Type "image/svg+xml"
+    Require all granted
+</FilesMatch>
