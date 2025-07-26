@@ -63,12 +63,12 @@ h3 {
 }
 
 .segment {
-    padding: 5em 3em 5em;
+    padding: 5em;
     font-family: 'Sono', sans-serif;
     font-weight: normal;
 
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 body {
@@ -81,8 +81,8 @@ body {
 }
 
 #me-img {
-    width: 30rem;
-    height: 30rem;
+    width: min(30rem, 100%);
+    height: auto;
     cursor: pointer;
     display: block;
     margin-left: auto;
@@ -91,10 +91,34 @@ body {
     box-shadow: #d9ff00 0 0 10px, #00d9ff 0 0 20px, #ff0000 0 0 30px;
 }
 
+#me-img:hover+#me-arrows {
+    opacity: 1;
+}
+
 #me-img:active {
     transform: rotate(360deg);
     transition: .5s;
 }
+
+#me-img:active+#me-arrows {
+    opacity: 1;
+    transition: opacity 5s ease-out;
+}
+
+#me-arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    transform: translate(-50%, -50%);
+    max-width: 100vw;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+}
+
+
 
 #cv {
     background-color: #a5cd0030;
@@ -136,6 +160,24 @@ body {
 
 #photos {
     background-color: #00914130;
+    align-items: center;
+}
+
+.gallery-arrow {
+    font-weight: bold;
+    color: #7400FF;
+    opacity: 0;
+    text-shadow: 0 0 8px #000, 0 0 2px #000;
+    cursor: pointer;
+    mix-blend-mode: saturation;
+}
+
+.custom-carousel:hover {
+    .gallery-arrow {
+        opacity: 1;
+        transition: opacity 0.1s ease-in-out;
+    }
+
 }
 
 #contact {
@@ -171,6 +213,7 @@ footer {
     padding: 2em 0;
     background: #222;
     color: #fff;
+    box-shadow: ;
 }
 
 a {
@@ -184,10 +227,9 @@ a:hover {
 }
 
 .custom-carousel {
-    width: 35rem;
+    width: min(30rem, 100%);
     height: auto;
-    object-fit: cover;
-    border-radius: 10px;
+    cursor: pointer;
 }
 
 button {
@@ -201,4 +243,14 @@ button {
 
 button:hover {
     background: #005fa3;
+}
+
+footer {
+    text-align: center;
+    font-weight: normal;
+    padding: 1rem;
+    background: #ffc200aa;
+    color: #222222;
+    box-shadow: #ffc200 0 0 5px, #ffc200 0 0 15px, #ffc200 0 0 30px;
+
 }
