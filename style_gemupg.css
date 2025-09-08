@@ -125,6 +125,11 @@ header img {
     box-shadow: #0004ff30 0 0 5px, #0004ff30 0 0 15px, #0004ff30 0 0 30px;
 }
 
+#features {
+    background: #ff000030;
+    box-shadow: #ff000030 0 0 5px, #ff000030 0 0 15px, #ff000030 0 0 30px;
+}
+
 code {
     font-family: 'Mono', monospace;
     background: #222222aa;
@@ -133,6 +138,21 @@ code {
     border-radius: .5em;
     width: 100%;
     /* box-shadow: #ffc200 0 0 2px, #ffc200 0 0 5px, #ffc200 0 0 15px; */
+}
+
+video {
+    max-width: min(80%, 800px);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: fit-content;
+    border: 2px solid #222;
+    box-shadow: #ffc200 0 0 5px, #ffc200 0 0 15px, #ffc200 0 0 30px;
+}
+
+#demo {
+    padding-bottom: 3em;
 }
 
 body {
