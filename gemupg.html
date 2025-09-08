@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gemuPG - A Generative Poly* Music Grid</title>
+    <link rel="stylesheet" href="style_gemupg.css">
+    <link rel="icon" href="pictures/gemupg/favicon.bmp" sizes="any" type="image/bmp">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>gemuPG</h1>
+            <h2>A Generative Poly* Music Grid</h2>
+            <img src="pictures/gemupg/gemupg.gif" alt="gif showing gemuPG in action">
+        </header>
+        <section class="segment" id="abstract">
+            <h3>Abstract</h3>
+            <p>Conventional music software, like Digital Audio Workstations (DAWs) and notation tools, adhere to
+                established rules of traditional Western music composition, which limits creative composition in
+                rhythmic
+                and tonal dimensions. The new open-source music environment gemuPG aims to explore the capabilities of a
+                software-centric approach to music-making that is not bound to traditional approaches. The design
+                focuses on inherent use of polymeters, polyrhythms, and microtonality. The term poly* (pronounced 'poly
+                asterisk' or simply 'poly') is therefore introduced, which groups these concepts together.
+                A grid-based interface rethinks audio tracks as areas on a two-dimensional grid. Generator blocks can be
+                placed within these areas to create virtual instruments through additive synthesis. Sequencer blocks are
+                placed on the sides of the areas to create the respective area's sequence. The length of each area's
+                sequence therefore corresponds to its circumference.</p>
+        </section>
+        <section class="segment" id="areas">
+            <h3>Areas</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 5rem;">
+                <div style="flex: 1 1 20rem;">
+                    Areas in gemuPG substitute tracks in conventional DAWs.
+                    They can be created by placing the grey area blocks in the grid.
+                    Orthogonally adjacent blocks are connected and form a single area.
+                    Areas offer settings for changing their amplitude, as well as glissando, attack and release times of
+                    the individual notes.
+                    Additionally, the subdivision of the area can be set, which allows for easy polyrhythmic music
+                    patterns.
+                </div>
+                <div style="align-items: center; flex: 1 1 25rem; justify-content: center; display: flex;">
+                    <img src="pictures/gemupg/areas.gif"
+                        alt="gif showing areas being placed along with their settings windows">
+                </div>
+            </div>
+        </section>
+        <section class="segment" id="sequencers">
+            <h3>Sequencers</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 5rem;">
+                <div style="align-items: center; flex: 1 1 25rem; justify-content: center; display: flex;">
+                    <img src="pictures/gemupg/sequencers.gif"
+                        alt="gif showing sequencer blocks being placed along with their settings windows">
+                </div>
+                <div style="flex: 1 1 20rem;">
+                    Sequencer blocks are placed on the sides of the areas to create the area's sequence.
+                    The length of which corresponds to the area circumference, allowing for easy creation of
+                    polymeters.<br>
+                    There are four types of sequencer blocks, designed to encourage microtonality. The 'absolute' type
+                    sets
+                    the
+                    current frequency to a set
+                    value. The
+                    'relative' block adds or subtracts an offset from the previously set frequency. Sequencer blocks of
+                    type
+                    'note' allow for selecting a note from the twelve-tone equal temperament system (mainly for
+                    accessibility). Lastly, 'interval'
+                    blocks
+                    transpose the last frequency by a number of steps in a configurable edo (equal division of the
+                    octave)
+                    scale.
+                </div>
+            </div>
+        </section>
+        <section class="segment" id="generators">
+            <h3>Generators</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 5rem;">
+                <div style="flex: 1 1 20rem;">
+                    Generator blocks create sound through additive synthesis. They can either be placed outside of areas
+                    to play continuously or within areas to be triggered by the area's sequence.
+                    A selection of simple waveforms is available to choose from. Additionally, WAV files can be
+                    loaded,
+                    allowing for more complex sound creation. When a generator block is placed within an area, relative
+                    frequency
+                    and frequency factor values can also be set. Loading a sample furthermore lets the user decide
+                    between
+                    one-shot
+                    or looped playback of the samples.
+                </div>
+                <div style="align-items: center; flex: 1 1 25rem; justify-content: center; display: flex;">
+                    <img src="pictures/gemupg/generators.gif"
+                        alt="gif showing generator blocks being placed along with their settings windows">
+                </div>
+            </div>
+        </section>
+        <section class="segment">
+            <h3>Compile instructions...</h3>
+            <p>I wrote gemuPG in C++20 using <i>SDL3</i> and <i>Dear ImGui</i>. It is distributed under the GNU
+                AGPLv3 license and available on the IEM GitLab:
+                <a href="https://git.iem.at/aronpetritz/gemupg/">https://git.iem.at/aronpetritz/gemupg/</a><br>
+            <div>
+                <code>
+                        git clone https://git.iem.at/aronpetritz/gemupg --recurse-submodules<br>
+                        #recurse-submodules is important!! <br>
+                        cd gemupg <br>
+                        mkdir build <br>
+                        cd build <br>
+                        cmake -S .. -B . <br>
+                        make -j$(nproc) <br>
+                    </code>
+            </div>
+
+            <br>
+            <h3>Controls</h3>
+            <table>
+                <tr>
+                    <td style="text-align: right;">Scroll Wheel</td>
+                    <td style="text-align: left;">Zoom</td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Middle Click / Ctrl + Left Click</td>
+                    <td style="text-align: left;">Pan</td>
+                </tr>
+                <td style="border: 3px" colspan="2" style="text-align: center;"></td>
+                <tr>
+                    <td style="text-align: right;">1/2/3</td>
+                    <td style="text-align: left;">select area/generator block/sequencer block</td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Left Click</td>
+                    <td style="text-align: left;">Place Block/Area</td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Right Click</td>
+                    <td style="text-align: left;">Remove Block/Area*</td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Left Click on Block/Area</td>
+                    <td style="text-align: left;">Edit Block/Area*
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border: 3px" colspan="2" style="text-align: center;"></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Ctrl + S</td>
+                    <td style="text-align: left;">Save</td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Ctrl + Shift + S</td>
+                    <td style="text-align: left;">Save As</td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Ctrl + O</td>
+                    <td style="text-align: left;">Open</td>
+                </tr>
+                <tr>
+                    <td style="border: 3px" colspan="2" style="text-align: center;">On Hover:</td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Ctrl + C</td>
+                    <td style="text-align: left;">Copy Block</td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Ctrl + V</td>
+                    <td style="text-align: left;">Paste Block</td>
+                </tr>
+            </table>
+            <p style="text-align: right;">*respective tool needs to be selected</p>
+
+            <hr>
+            <p>I made gemuPG for my bachelor's thesis which can be read <a href="documents/gemupg.pdf"
+                    target="_blank">here</a> if you're interested. :)</p>
+        </section>
+
+        <section id="contact">
+            <h3>Contact</h3>
+            <ul>
+                <li><a target="_blank" href="mailto:info@aronrocco.at"><img src=" pictures/icons/socials/email.svg"
+                            alt="Email"></a></li>
+                <li><a target="_blank" href="https://bsky.app/profile/sly-roccoon.bsky.social"><img
+                            src=" pictures/icons/socials/bsky.svg" alt="Bluesky"></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/aron-rocco-petritz-47425123a/"><img
+                            src=" pictures/icons/socials/linkedin.svg" alt="LinkedIn"></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/sly_roccoon/"><img
+                            src=" pictures/icons/socials/instagram.svg" alt="Instagram"></a></li>
+                <li><a target="_blank" href="https://github.com/sly-roccoon"><img
+                            src="pictures/icons/socials/github.svg" alt="GitHub"></a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <a href="https://www.aronrocco.at">© 2025 Aron Rocco Petritz
+        </a>
+    </footer>
+</body>
+
+</html>

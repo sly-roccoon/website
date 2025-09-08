@@ -1,0 +1,213 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* Basic CSS Template */
+
+@font-face {
+    font-family: 'Ruska Display';
+    src: url('fonts/RuskaDisplay-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sono';
+    src: url('fonts/sono/Sono-SemiBold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sono';
+    src: url('fonts/sono/Sono-ExtraLight.woff2') format('woff2');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sono';
+    src: url('fonts/sono/Sono-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'Sono', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.0;
+    font-size: 4em;
+    color: #7400FF;
+    margin-bottom: -.5em;
+    margin-top: .5em;
+
+    text-shadow: #005fa3 2px 3px;
+}
+
+h2 {
+    font-family: 'Sono', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5em;
+    color: #7400FF;
+    margin-bottom: 1em;
+
+    text-shadow: #005fa3 1px 2px;
+}
+
+h3 {
+    font-family: 'Sono', sans-serif;
+    font-weight: bold;
+    text-decoration: overline underline;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    padding: 0em;
+    padding-bottom: 4em;
+}
+
+header img {
+    width: min(80%, 600px);
+    height: auto;
+    border: 2px solid #222;
+    box-shadow: #ffc200 0 0 5px, #ffc200 0 0 15px, #ffc200 0 0 30px;
+}
+
+.segment {
+    padding: 5em;
+    font-family: 'Sono', sans-serif;
+    font-weight: normal;
+
+    text-align: justify;
+    padding: 1em 15% 2em 15%;
+}
+
+.segment>div {
+    display: flex;
+    flex-wrap: wrap;
+
+    /* align-items: center; */
+}
+
+.segment>div>div {
+    margin: 0;
+    padding: 0;
+}
+
+.segment img {
+    width: 100%;
+    height: fit-content;
+    border: 2px solid #222;
+    box-shadow: #ffc200 0 0 5px, #ffc200 0 0 15px, #ffc200 0 0 30px;
+}
+
+#abstract {
+    background: #aa55aa30;
+    box-shadow: #aa55aa30 0 0 5px, #aa55aa30 0 0 15px, #aa55aa30 0 0 30px;
+}
+
+#areas {
+    background: #67676730;
+    box-shadow: #67676730 0 0 5px, #67676730 0 0 15px, #67676730 0 0 30px;
+}
+
+#sequencers {
+    background: #fcf80030;
+    box-shadow: #fcf80030 0 0 5px, #fcf80030 0 0 15px, #fcf80030 0 0 30px;
+}
+
+#generators {
+    background: #0004ff30;
+    box-shadow: #0004ff30 0 0 5px, #0004ff30 0 0 15px, #0004ff30 0 0 30px;
+}
+
+code {
+    font-family: 'Mono', monospace;
+    background: #222222aa;
+    color: #04ff00;
+    padding: 0.5em 1em;
+    border-radius: .5em;
+    width: 100%;
+    /* box-shadow: #ffc200 0 0 2px, #ffc200 0 0 5px, #ffc200 0 0 15px; */
+}
+
+body {
+    font-family: 'Sono', sans-serif;
+    margin: 0;
+    background-color: #bbbbbbff;
+    background-image: url('textures/coffee.jpg');
+    background-blend-mode: overlay;
+    color: #222;
+    line-height: 2;
+}
+
+#contact {
+    font-family: 'Sono', sans-serif;
+    font-weight: normal;
+
+    text-align: justify;
+    padding: 1em 15% 3em 15%;
+
+    background: #55aa5530;
+    box-shadow: #55aa5530 0 0 5px, #55aa5530 0 0 15px, #55aa5530 0 0 30px;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 3em;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    li {
+        display: inline-block;
+        /* Allows wrapping in flex container */
+        width: 3em;
+        height: 3em;
+        overflow: wrap;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+}
+
+a {
+    color: #222;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #55ff00;
+    text-decoration: underline;
+    text-decoration-color: #222;
+}
+
+footer {
+    text-align: center;
+    font-weight: normal;
+    padding: 1rem;
+    background: #ffc200aa;
+    color: #222222;
+    box-shadow: #ffc200 0 0 5px, #ffc200 0 0 15px, #ffc200 0 0 30px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 0.5em 1em;
+    border: 1px solid #ccc;
+}

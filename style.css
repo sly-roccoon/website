@@ -48,6 +48,7 @@ header h1 {
     font-family: 'Ruska Display', serif;
     font-size: 5em;
     opacity: 0.5;
+    color: #ffc200;
     text-shadow: #ffc200 0 0 2px, #ffc200 0 0 2px, #ffc200 0 0 2px;
 
     animation-name: flicker, tilt;
