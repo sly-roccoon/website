@@ -40,7 +40,7 @@ h1 {
     line-height: 1.0;
     font-size: 4em;
     color: #7400FF;
-    margin-bottom: -.5em;
+    margin-bottom: -.25em;
     margin-top: .5em;
 
     text-shadow: #005fa3 2px 3px;
@@ -48,6 +48,7 @@ h1 {
 
 h2 {
     font-family: 'Sono', sans-serif;
+    line-height: 1.2;
     font-weight: bold;
     text-align: center;
     font-size: 2.5em;
