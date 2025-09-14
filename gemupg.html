@@ -99,7 +99,7 @@
         <section class="segment" id="demo">
             <h3>Demo Video</h3>
             <video controls>
-                <source src="videos/gemupg_demo.mp4" type="video/mp4">
+                <source src="media/gemupg_demo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </section>
@@ -135,8 +135,29 @@
                         make -j$(nproc) <br>
                     </code>
             </div>
+        </section>
+        <section class="segment" id="demo">
+            <h3>Try it out!</h3>
+            <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
+            <script>
+                // Show play button overlay on canvas before click
+                var canvas = document.getElementById('canvas');
+                var ctx = canvas.getContext('2d');
+                ctx.fillRect(0,0,canvas.width, canvas.height);
 
-            <br>
+                var script = document.createElement('script');
+                // Wait for play button canvas click to load gemupg.js
+                document.getElementById('canvas').addEventListener('click', function () {
+                    if (!script.src) {
+                        script.src = 'gemupg/gemupg.js';
+                        document.body.appendChild(script);
+                    }
+                });
+                document.body.appendChild(script);
+            </script>
+            <p>This emscripten build is <i>very</i> experimental... File I/O does not work here and things might hang or run poorly...</p>
+        </section>
+        <section class="segment" id="controls">
             <h3>Controls</h3>
             <table>
                 <tr>
@@ -198,23 +219,23 @@
             <p>I made gemuPG for my bachelor's thesis which can be read <a href="documents/gemupg.pdf"
                     target="_blank">here</a> if you're interested. :)</p>
         </section>
-
-        <section id="contact">
-            <h3>Contact</h3>
-            <ul>
-                <li><a target="_blank" href="mailto:info@aronrocco.at"><img src=" pictures/icons/socials/email.svg"
-                            alt="Email"></a></li>
-                <li><a target="_blank" href="https://bsky.app/profile/sly-roccoon.bsky.social"><img
-                            src=" pictures/icons/socials/bsky.svg" alt="Bluesky"></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/aron-rocco-petritz-47425123a/"><img
-                            src=" pictures/icons/socials/linkedin.svg" alt="LinkedIn"></a></li>
-                <li><a target="_blank" href="https://www.instagram.com/sly_roccoon/"><img
-                            src=" pictures/icons/socials/instagram.svg" alt="Instagram"></a></li>
-                <li><a target="_blank" href="https://github.com/sly-roccoon"><img
-                            src="pictures/icons/socials/github.svg" alt="GitHub"></a></li>
-            </ul>
-        </section>
     </main>
+
+    <section id="contact">
+        <h3>Contact</h3>
+        <ul>
+            <li><a target="_blank" href="mailto:info@aronrocco.at"><img src=" pictures/icons/socials/email.svg"
+                        alt="Email"></a></li>
+            <li><a target="_blank" href="https://bsky.app/profile/sly-roccoon.bsky.social"><img
+                        src=" pictures/icons/socials/bsky.svg" alt="Bluesky"></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/aron-rocco-petritz-47425123a/"><img
+                        src=" pictures/icons/socials/linkedin.svg" alt="LinkedIn"></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/sly_roccoon/"><img
+                        src=" pictures/icons/socials/instagram.svg" alt="Instagram"></a></li>
+            <li><a target="_blank" href="https://github.com/sly-roccoon"><img src="pictures/icons/socials/github.svg"
+                        alt="GitHub"></a></li>
+        </ul>
+    </section>
     <footer>
         <a href="https://www.aronrocco.at">© 2025 Aron Rocco Petritz
         </a>
