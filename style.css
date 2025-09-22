@@ -50,6 +50,7 @@ header h1 {
     opacity: 0.5;
     color: #ffc200;
     text-shadow: #ffc200 0 0 2px, #ffc200 0 0 2px, #ffc200 0 0 2px;
+    text-decoration-line: none;
 
     animation-name: flicker, tilt;
     animation-duration: 3s, 15s;
@@ -174,7 +175,8 @@ body {
     margin-left: auto;
     margin-right: auto;
 
-    box-shadow: #d9ff00 0 0 10px, #00d9ff 0 0 20px, #ff0000 0 0 30px;
+    /* border: 1px solid #222; */
+    box-shadow: #ffc200 0 0 5px, #ffc200 0 0 15px, #ffc200 0 0 30px;
 }
 
 #me-img:hover+#me-arrows {
@@ -218,6 +220,11 @@ body {
 #me-img:hover+.me-arrows-container #me-arrows,
 #me-img:active+.me-arrows-container #me-arrows {
     opacity: 1;
+}
+
+iframe {
+    border: 1px solid #222;
+    box-shadow: #ffc200 0 0 5px, #ffc200 0 0 15px, #ffc200 0 0 30px;
 }
 
 #cv {
@@ -280,8 +287,62 @@ body {
     background-color: #aa55aa30;
 }
 
+#impressum {
+    width: 50%;
+    align-items: center;
+
+    p {
+        text-align: center;
+        text-decoration-line: overline underline;
+        text-decoration-style: wavy;
+        text-decoration-color: #ffc200;
+        text-decoration-thickness: 1pt;
+    }
+}
+
 .project {
     margin-bottom: 2em;
+}
+
+.druckeridee {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    gap: 2em;
+
+    div {
+        display: flex;
+
+        button {
+            width: 2em;
+            height: 2em;
+            font-size: 3em;
+            background-color: #005fa320;
+            color: #7300ff;
+            box-shadow: #7300ff 0 0 5px, #7300ff 0 0 15px;
+        }
+
+        audio {
+            display: none
+        }
+
+        p {
+            font-size: 3em;
+            font-weight: bold;
+            color: #7400ff;
+            text-shadow: #ffc200 0 0 5px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            image-rendering: pixelated;
+            border: 2px solid #222;
+            box-shadow: #ffc200 0 0 2px, #ffc200 0 0 5px, #ffc200 0 0 10px;
+        }
+    }
 }
 
 #photos {
@@ -296,6 +357,12 @@ body {
     text-shadow: 0 0 8px #000, 0 0 2px #000;
     cursor: pointer;
     mix-blend-mode: saturation;
+}
+
+.carousel-inner {
+
+    border: 2px solid #222;
+    box-shadow: #ffc200 0 0 5px, #ffc200 0 0 15px, #ffc200 0 0 30px;
 }
 
 .custom-carousel:hover {
@@ -341,6 +408,18 @@ a:hover {
     color: #55ff00;
     text-decoration: underline;
     text-decoration-color: #222;
+}
+
+h1 {
+    a {
+        color: #ffc200;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #ffc200;
+        text-decoration: none;
+    }
 }
 
 .custom-carousel {

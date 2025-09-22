@@ -1,23 +1,30 @@
-# Serve SVG files with the correct MIME type
 
+# STRONG HTACCESS PROTECTION
+<Files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</Files>
+
+# Serve SVG files with the correct MIME type
 AddType image/svg+xml .svg .svgz
 AddEncoding gzip .svgz
+AddType application/wasm .wasm
 
 AddType application/wasm .wasm
 AddOutputFilterByType DEFLATE application/wasm
 
 # Allow access to SVG files
-
 <FilesMatch "\.(svg|svgz)$">
 Header set Content-Type "image/svg+xml"
 Require all granted
 </FilesMatch>
 
 # proper COOP and COEP headers for gemupg webasm multithreading
-
 <IfModule mod_headers.c>
     <Files "gemupg.html">
         Header set Cross-Origin-Opener-Policy "same-origin"
         Header set Cross-Origin-Embedder-Policy "require-corp"
     </Files>
 </IfModule>
+

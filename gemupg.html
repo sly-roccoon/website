@@ -138,24 +138,9 @@
         </section>
         <section class="segment" id="demo">
             <h3>Try it out!</h3>
-            <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
-            <script>
-                // Show play button overlay on canvas before click
-                var canvas = document.getElementById('canvas');
-                var ctx = canvas.getContext('2d');
-                ctx.fillRect(0,0,canvas.width, canvas.height);
-
-                var script = document.createElement('script');
-                // Wait for play button canvas click to load gemupg.js
-                document.getElementById('canvas').addEventListener('click', function () {
-                    if (!script.src) {
-                        script.src = 'gemupg/gemupg.js';
-                        document.body.appendChild(script);
-                    }
-                });
-                document.body.appendChild(script);
-            </script>
-            <p>This emscripten build is <i>very</i> experimental... File I/O does not work here and things might hang or run poorly...</p>
+            <a target="_blank" rel="noopener noreferrer" href="gemupg/try.html"><img src="gemupg/placeholder.png"></a>
+            <p>This emscripten build is <i>very</i> experimental... File I/O does not work here and things run very
+                poorly...</p>
         </section>
         <section class="segment" id="controls">
             <h3>Controls</h3>
@@ -217,7 +202,9 @@
 
             <hr>
             <p>I made gemuPG for my bachelor's thesis which can be read <a href="documents/gemupg.pdf"
-                    target="_blank">here</a> if you're interested. :)</p>
+                    target="_blank">here</a> if you're interested. :)<br>
+                A shorter paper written for the AES Europe 2025 Student Project Expo can be downloaded <a
+                    href="documents/gemupg-aes.pdf" target="_blank">here.</a></p>
         </section>
     </main>
 
@@ -237,8 +224,7 @@
         </ul>
     </section>
     <footer>
-        <a href="https://www.aronrocco.at">© 2025 Aron Rocco Petritz
-        </a>
+        <a href="https://www.aronrocco.at">© 2025 Aron Rocco Petritz</a>
     </footer>
 </body>
 

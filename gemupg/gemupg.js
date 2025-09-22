@@ -65,8 +65,8 @@ Module["expectedDataFileDownloads"]++;
       // web worker
       PACKAGE_PATH = encodeURIComponent(location.pathname.substring(0, location.pathname.lastIndexOf("/")) + "/");
     }
-    var PACKAGE_NAME = "gemupg/gemupg.data";
-    var REMOTE_PACKAGE_BASE = "gemupg/gemupg.data";
+    var PACKAGE_NAME = "gemupg.data";
+    var REMOTE_PACKAGE_BASE = "gemupg.data";
     var REMOTE_PACKAGE_NAME = Module["locateFile"]?.(REMOTE_PACKAGE_BASE, "") ?? REMOTE_PACKAGE_BASE;
     var REMOTE_PACKAGE_SIZE = metadata["remote_package_size"];
     async function fetchRemotePackage(packageName, packageSize) {
