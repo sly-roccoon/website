@@ -352,11 +352,13 @@ iframe {
 
 .gallery-arrow {
     font-weight: bold;
+    font-size: xx-large;
     color: #7400FF;
     opacity: 0;
     text-shadow: 0 0 8px #000, 0 0 2px #000;
     cursor: pointer;
     mix-blend-mode: saturation;
+    text-decoration: none;
 }
 
 .carousel-inner {

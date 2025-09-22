@@ -46,7 +46,7 @@
                 <img id="me-arrows" src="pictures/icons/arrows.svg" alt="arrows">
             </div>
         </div>
-        <script> //TODO: get images automatically
+        <script>
             const images = [
                 "pictures/me/1.jpg",
                 "pictures/me/2.jpg",
@@ -55,7 +55,10 @@
                 "pictures/me/5.jpg",
                 "pictures/me/6.jpg",
                 "pictures/me/7.jpg",
-                "pictures/me/8.jpg"
+                "pictures/me/8.jpg",
+                "pictures/me/9.jpg",
+                "pictures/me/10.jpg",
+                "pictures/me/11.jpg"
             ];
             document.getElementById('me-img').onclick = function () {
                 let current = this.src.split('/').pop();
@@ -310,11 +313,11 @@
 
                 <a class="carousel-control-prev" href="#gallery" role="button" data-slide="prev">
                     <p class="gallery-arrow">
-                        <- </p>
-                            <span class="sr-only">Previous</span>
+                        ⇐</p>
+                    <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#gallery" role="button" data-slide="next">
-                    <p class="gallery-arrow">-></p>
+                    <p class="gallery-arrow">⇒</p>
                     <span class="sr-only">Next</span>
                 </a>
                 <br>
