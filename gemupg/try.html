@@ -6,13 +6,17 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Try gemuPG!</title>
   <link rel="stylesheet" href="../style_gemupg.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
   <h1 style="padding-bottom: 0em;">Try gemuPG!</h1>
   <h3 style="padding: 1em 0.5em 0em"><a href="../gemupg.html">↩ return to explanation...</a></h3>
   <section class="segment">
-    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"
+      onmousedown="if (event.button === 1) event.preventDefault();"
+      onauxclick="if (event.button === 1) event.preventDefault();" tabindex="0"></canvas>
     <script async type="text/javascript" src="gemupg.js"></script>
     <p style="text-align: center;">
       <b>press F11 to go fullscreen!</b>

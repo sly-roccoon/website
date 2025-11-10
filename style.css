@@ -3,7 +3,9 @@ body {
     overflow-x: hidden;
 }
 
-/* Basic CSS Template */
+* {
+    box-sizing: border-box;
+}
 
 @font-face {
     font-family: 'Ruska Display';

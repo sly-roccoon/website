@@ -1,6 +1,13 @@
 # proper COOP and COEP headers for gemupg webasm multithreading
+AddOutputFilterByType DEFLATE application/wasm
+
+Options Multiviews
+RemoveType .gz
+AddEncoding x-gzip .gz
+AddType application/wasm .wasm
 
 <IfModule mod_headers.c>
+
         Header set Cross-Origin-Resource-Policy "same-site"
         Header set Cross-Origin-Embedder-Policy "require-corp"
         Header set Cross-Origin-Opener-Policy "same-origin"
