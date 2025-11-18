@@ -7,6 +7,9 @@
     <title>gemuPG - A Generative Music Poly* Grid</title>
     <link rel="stylesheet" href="style_gemupg.css">
     <link rel="icon" href="pictures/gemupg/favicon.bmp" sizes="any" type="image/bmp">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preload" href="fonts/sono/Sono-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/RuskaDisplay-Regular.otf" as="font" type="font/otf" crossorigin>
 </head>
 
 <body>
@@ -26,6 +29,7 @@
                 focuses on inherent use of polymeters, polyrhythms, and microtonality. The term poly* (pronounced 'poly
                 asterisk' or simply 'poly') is therefore introduced, which groups these concepts together.
                 A grid-based interface rethinks audio tracks as areas on a two-dimensional grid. Generator blocks can be
+                Sequencer blocks are placed on the sides of the areas to create the area's sequence.
                 placed within these areas to create virtual instruments through additive synthesis. Sequencer blocks are
                 placed on the sides of the areas to create the respective area's sequence. The length of each area's
                 sequence therefore corresponds to its circumference.</p>
@@ -56,7 +60,6 @@
                         alt="gif showing sequencer blocks being placed along with their settings windows">
                 </div>
                 <div style="flex: 1 1 20rem;">
-                    Sequencer blocks are placed on the sides of the areas to create the area's sequence.
                     The length of which corresponds to the area circumference, allowing for easy creation of
                     polymeters.<br>
                     There are four types of sequencer blocks, designed to encourage microtonality. The 'absolute' type
@@ -99,7 +102,7 @@
         <section class="segment" id="demo">
             <h3>Demo Video</h3>
             <video controls>
-                <source src="media/gemupg_demo.mp4" type="video/mp4">
+                <source src="media/gemupg_demo.mp4" type="video/mp4" preload="none">
                 Your browser does not support the video tag.
             </video>
         </section>

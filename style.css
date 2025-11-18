@@ -12,13 +12,25 @@ body {
     src: url('fonts/RuskaDisplay-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
+
+@font-face {
+    font-family: 'ComicShannsMono';
+    src: url('fonts/ComicShannsMono-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+
+}
+
 
 @font-face {
     font-family: 'Sono';
     src: url('fonts/sono/Sono-SemiBold.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -26,6 +38,7 @@ body {
     src: url('fonts/sono/Sono-ExtraLight.woff2') format('woff2');
     font-weight: lighter;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -33,6 +46,7 @@ body {
     src: url('fonts/sono/Sono-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 header {
@@ -151,21 +165,28 @@ h3 {
 
 .segment {
     padding: 5em;
-    font-family: 'Sono', sans-serif;
     font-weight: normal;
 
     padding-top: 5em;
     padding-left: 10%;
     padding-right: 10%;
+
+    p {
+        text-align: justify;
+        word-wrap: break-word;
+        mix-blend-mode: difference;
+    }
 }
 
 body {
-    font-family: 'Sono', sans-serif;
+    font-family: 'ComicShannsMono', sans-serif;
     margin: 0;
     background-color: #bbbbbbff;
     background-image: url('textures/coffee.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     background-blend-mode: overlay;
-    color: #222;
+    color: #db4900;
     line-height: 2;
 }
 
@@ -225,6 +246,11 @@ body {
 }
 
 iframe {
+    border: 1px solid #222;
+    box-shadow: #ffc200 0 0 5px, #ffc200 0 0 15px, #ffc200 0 0 30px;
+}
+
+video {
     border: 1px solid #222;
     box-shadow: #ffc200 0 0 5px, #ffc200 0 0 15px, #ffc200 0 0 30px;
 }
@@ -404,7 +430,7 @@ iframe {
 }
 
 a {
-    color: #222;
+    color: inherit;
     text-decoration: underline;
 }
 

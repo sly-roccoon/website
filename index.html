@@ -126,12 +126,18 @@
                     </p>
                 </div>
                 <div style="align-items: center; flex: 1 1 27.5rem;">
-                    <iframe width="960" height="720"
+                    <!-- <iframe width="960" height="720"
                         src="https://www.youtube-nocookie.com/embed/ELWNNCeIu0Q?si=1z354XCZuFH2h3CD"
                         title="YouTube video player" frameborder="0"
                         style="max-width:100%; height:auto; aspect-ratio:16/9;"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                    <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                        <video controls height="480">
+                            <source src="media/gemupg_demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
             </div>
         </div>
@@ -174,20 +180,20 @@
         </div>
 
         <div class="project">
-            <p>
             <h3>DieDruckerIdee [in progress]</h3>
-            A project made in Pure Data with <a href="https://youngzwiebelandthegemusebeat.github.io/">Luca
-                Candussi</a> and Maximilian
-            Helligrath.<br>
-            We deterministically convert audio to an image and back again. A CD quality audio file is taken and each
-            16 Bit sample converted into 2/3 of a pixel (two 8 Bit colour channels). Thus, three samples make up two
-            pixels of an image. This is repeated in a spiral pattern for a 144x255 pixel image. After this, the
-            image can be losslessly converted back to an audio file. We want to show the lossiness of conversion
-            through different colour spaces, as well as perception through air. Nothing is colour accurate and this
-            can be sonically perceived through the distortion of the original file, which is re-scanned with a
-            camera recording different screens (LCD, CRT, projector, printer, etc.).
-            Pure Data externals utilising OpenCV for automatic crop and deskew were programmed.
-            <br>Two example conversions using a spiraling output are shown below:
+            <p>
+                A project made in Pure Data with <a href="https://youngzwiebelandthegemusebeat.github.io/">Luca
+                    Candussi</a> and Maximilian
+                Helligrath.<br>
+                We deterministically convert audio to an image and back again. A CD quality audio file is taken and each
+                16 Bit sample converted into 2/3 of a pixel (two 8 Bit colour channels). Thus, three samples make up two
+                pixels of an image. This is repeated in a spiral pattern for a 144x255 pixel image. After this, the
+                image can be losslessly converted back to an audio file. We want to show the lossiness of conversion
+                through different colour spaces, as well as perception through air. Nothing is colour accurate and this
+                can be sonically perceived through the distortion of the original file, which is re-scanned with a
+                camera recording different screens (LCD, CRT, projector, printer, etc.).
+                Pure Data externals utilising OpenCV for automatic crop and deskew were programmed.
+                <br>Two example conversions using a spiraling output are shown below:
             </p>
             <br>
             <div class="druckeridee">
@@ -226,88 +232,115 @@
                 <div class="carousel-inner bs5-carousel" class="carousel-control-next" href="#gallery" role="button"
                     data-slide="next">
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/000.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/000.jpg" decoding="async" alt="">
                     </div>
                     <div class="carousel-item active">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/001.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/001.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/002.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/002.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/003.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/003.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/004.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/004.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/005.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/005.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/006.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/006.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/007.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/007.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/008.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/008.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/009.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/009.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/010.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/010.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/011.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/011.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/012.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/012.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/013.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/013.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/014.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/014.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/015.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/015.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/016.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/016.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/017.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/017.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/018.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/018.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/019.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/019.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/020.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/020.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/021.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/021.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/022.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/022.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/023.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/023.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/024.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/024.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/025.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/025.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/026.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/026.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block custom-carousel" src="pictures/slideshow/027.jpg">
+                        <img class="d-block custom-carousel" src="pictures/slideshow/027.jpg" loading="lazy"
+                            decoding="async" alt="">
                     </div>
                 </div>
 
@@ -369,13 +402,13 @@
     </footer>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    <script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 </body>
