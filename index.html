@@ -12,12 +12,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
 
-    <link rel="preload" as="image" href="fonts/RuskaDisplay-Regular.otf">
-    <link rel="preload" as="image" href="fonts/sono/Sono-Bold.woff2">
-    <link rel="preload" as="image" href="fonts/sono/Sono-SemiBold.woff2">
-    <link rel="preload" as="image" href="fonts/sono/Sono-Regular.woff2">
-    <link rel="preload" as="image" href="fonts/sono/Sono-ExtraLight.woff2">
-
+    <link rel="preload" as="font" href="fonts/RuskaDisplay-Regular.otf">
+    <link rel="preload" as="font" href="fonts/sono/Sono-Bold.woff2">
+    <link rel="preload" as="font" href="fonts/sono/Sono-SemiBold.woff2">
+    <link rel="preload" as="font" href="fonts/sono/Sono-Regular.woff2">
+    <link rel="preload" as="font" href="fonts/sono/Sono-ExtraLight.woff2">
     <link rel="preload" as="image" href="pictures/me/1.jpg">
     <link rel="preload" as="image" href="pictures/me/2.jpg">
     <link rel="preload" as="image" href="pictures/me/3.jpg">
@@ -47,6 +46,7 @@
             </div>
         </div>
         <script>
+            const path = "pictures/me/";
             const images = [
                 "pictures/me/1.jpg",
                 "pictures/me/2.jpg",
@@ -61,11 +61,11 @@
                 "pictures/me/11.jpg"
             ];
             document.getElementById('me-img').onclick = function () {
-                let current = this.src.split('/').pop();
+                let current = this.src;
                 let next;
                 do {
                     next = images[Math.floor(Math.random() * images.length)];
-                } while (next.endsWith(current));
+                } while (next === current);
                 this.src = next;
             };
         </script>
@@ -108,9 +108,9 @@
 
         <h2>some things i made...</h2>
         <div class="project">
+            <h3><a href="https://github.com/sly-roccoon/gemuPG/">gemuPG</a></h3>
             <div style="display: flex; flex-wrap: wrap; gap: 2em;">
                 <div style="flex: 1 1 27.5rem;">
-                    <h3><a href="https://github.com/sly-roccoon/gemuPG/">gemuPG</a></h3>
                     <p><a href="gemupg.html">I created a poly* (polymetric, polyrhythmic, microtonal) music making
                             software thingy!</a> I wanted
                         to
@@ -133,7 +133,7 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
                     <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
-                        <video controls height="480">
+                        <video controls height="480" style="max-width:100%; height:auto; aspect-ratio:4/3;">
                             <source src="media/gemupg_demo.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -143,17 +143,17 @@
         </div>
 
         <div class="project">
+            <h3><a href="https://github.com/sly-roccoon/electroaxolotl">Electroaxolotl</a></h3>
             <div style="display: flex; flex-wrap: wrap; gap: 2em;">
                 <div style="flex: 1 1 27.5rem;">
                     <iframe width="960" height="720"
                         src="https://www.youtube-nocookie.com/embed/7Afw6u8_qUI?si=CGcZGUEbt96hjOBR"
-                        title="YouTube video player" frameborder="0"
-                        style="max-width:100%; height:auto; aspect-ratio:16/9;"
+                        title="YouTube video player"
+                        style="margin-top: 1em; margin-bottom: -1em; max-width:100%; height:auto; aspect-ratio:16/9;"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div style="flex: 1 1 27.5rem;">
-                    <h3><a href="https://github.com/sly-roccoon/electroaxolotl">Electroaxolotl</a></h3>
                     <p>
                         Inspired by the game Electroplankton for the Nintendo DS I created a three dimensional sound
                         sandbox. You
@@ -186,7 +186,7 @@
                     Candussi</a> and Maximilian
                 Helligrath.<br>
                 We deterministically convert audio to an image and back again. A CD quality audio file is taken and each
-                16 Bit sample converted into 2/3 of a pixel (two 8 Bit colour channels). Thus, three samples make up two
+                16 Bit sample converted into 2/3 of a pixel (two 8-Bit colour channels). Thus, three samples make up two
                 pixels of an image. This is repeated in a spiral pattern for a 144x255 pixel image. After this, the
                 image can be losslessly converted back to an audio file. We want to show the lossiness of conversion
                 through different colour spaces, as well as perception through air. Nothing is colour accurate and this
@@ -199,29 +199,41 @@
             <div class="druckeridee">
                 <div>
                     <button onclick="this.nextElementSibling.play()">▶</button>
-                    <audio src="media/druckeridee/input_cat.wav"></audio>
+                    <audio src="media/druckeridee/cat.wav"></audio>
                 </div>
                 <div>
                     <p>⇉</p>
                 </div>
                 <div class="druckeridee-img" style="flex-basis: 50%">
-                    <img src="media/druckeridee/input_cat_output.bmp" alt="Converted Image">
+                    <img src="media/druckeridee/cat.jpg" alt="Converted Image">
                 </div>
             </div>
             <br>
             <div class="druckeridee">
                 <div>
                     <button onclick="this.nextElementSibling.play()">▶</button>
-                    <audio src="media/druckeridee/input_airhorn.wav"></audio>
+                    <audio src="media/druckeridee/airhorn.wav"></audio>
                 </div>
                 <div>
                     <p>⇉</p>
                 </div>
                 <div class="druckeridee-img" style="flex-basis: 50%">
-                    <img src="media/druckeridee/input_airhorn_output.bmp" alt="Converted Image">
+                    <img src="media/druckeridee/airhorn.jpg" alt="Converted Image">
                 </div>
             </div>
-        </div>
+            <br>
+            <div class="druckeridee">
+                <div>
+                    <button onclick="this.nextElementSibling.play()">▶</button>
+                    <audio src="media/druckeridee/harmonika.wav"></audio>
+                </div>
+                <div>
+                    <p>⇉</p>
+                </div>
+                <div class="druckeridee-img" style="flex-basis: 50%">
+                    <img src="media/druckeridee/harmonika.jpg" alt="Converted Image">
+                </div>
+            </div>
         </div>
     </section>
 
