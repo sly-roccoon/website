@@ -84,12 +84,10 @@
                     class="tooltiptext">Godot</span></li>
             <li class="skill"><img src="pictures/icons/skills/matlab.svg" alt="Matlab"><span
                     class="tooltiptext">Matlab</span></li>
-            <li class="skill"><img src="pictures/icons/skills/arduino.svg" alt="Microcontrollers"><span
+            <li class="skill"><img src="pictures/icons/skills/microcontrollers.svg" alt="Microcontrollers"><span
                     class="tooltiptext">Microcontrollers</span></li>
             <li class="skill"><img src="pictures/icons/skills/reaper.svg" alt="Reaper"><span
                     class="tooltiptext">Reaper</span></li>
-            <li class="skill"><img src="pictures/icons/skills/studioone7.svg" alt="Studio One"><span
-                    class="tooltiptext">Studio One</span></li>
             <li class="skill"><img src="pictures/icons/skills/ambisonics.svg" alt="Ambisonics"><span
                     class="tooltiptext">Ambisonics</span></li>
             <li class="skill"><img src="pictures/icons/skills/supercollider.svg" alt="Supercollider"><span
@@ -100,8 +98,8 @@
                     class="tooltiptext">Blender</span></li>
             <li class="skill"><img src="pictures/icons/skills/davinci.svg" alt="DaVinci Resolve"><span
                     class="tooltiptext">DaVinci Resolve</span></li>
-            <li class="skill"><img src="pictures/icons/skills/affinity_designer.svg" alt="Affinity Software"><span
-                    class="tooltiptext">Affinity Software</span></li>
+            <li class="skill"><img src="pictures/icons/skills/affinity.svg" alt="Affinity"><span
+                    class="tooltiptext">Affinity</span></li>
         </ul>
     </section>
 
@@ -127,12 +125,6 @@
                     </p>
                 </div>
                 <div style="align-items: center; flex: 1 1 27.5rem;">
-                    <!-- <iframe width="960" height="720"
-                        src="https://www.youtube-nocookie.com/embed/ELWNNCeIu0Q?si=1z354XCZuFH2h3CD"
-                        title="YouTube video player" frameborder="0"
-                        style="max-width:100%; height:auto; aspect-ratio:16/9;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
                     <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
                         <video controls height="480" style="max-width:100%; height:auto; aspect-ratio:4/3;">
                             <source src="media/gemupg_demo.mp4" type="video/mp4">
@@ -181,21 +173,40 @@
         </div>
 
         <div class="project">
-            <h3>DieDruckerIdee [in progress]</h3>
-            <p>
-                A project made in Pure Data with <a href="https://youngzwiebelandthegemusebeat.github.io/">Luca
-                    Candussi</a> and Maximilian
-                Helligrath.<br>
-                We deterministically convert audio to an image and back again. A CD quality audio file is taken and each
-                16 Bit sample converted into 2/3 of a pixel (two 8-Bit colour channels). Thus, three samples make up two
-                pixels of an image. This is repeated in a spiral pattern for a 144x255 pixel image. After this, the
-                image can be losslessly converted back to an audio file. We want to show the lossiness of conversion
-                through different colour spaces, as well as perception through air. Nothing is colour accurate and this
-                can be sonically perceived through the distortion of the original file, which is re-scanned with a
-                camera recording different screens (LCD, CRT, projector, printer, etc.).
-                Pure Data externals utilising OpenCV for automatic crop and deskew were programmed.
-                <br>Two example conversions using a spiraling output are shown below:
-            </p>
+            <h3>Intermedia Deterioration Machine</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 2em;">
+                <div style="flex: 1 1 27.5rem;">
+                    <p>
+                        A project made in Pure Data with <a href="https://youngzwiebelandthegemusebeat.github.io/">Luca
+                            Candussi</a> and Maximilian
+                        Helligrath.<br>
+                        We deterministically convert audio to an image and back again. A 24bit @ 44.1kHz WAV file is
+                        taken and each sample converted to a pixel (8-Bit RGB channels) and output as a spiral.
+                        The image can then losslessly be converted back to an audio file.
+                        By converting through different colour spaces the lossiness of visual representation is made
+                        audible. Complete colour accuracy does not exist. This can be heard through the
+                        distortion of the original file, which is re-scanned using a camera recording various different
+                        screens
+                        (LCD, CRT, projector, printer, etc.).
+                        Pure Data externals for encoding and decoding, and one utilising OpenCV for automatic crop and
+                        deskew, were programmed.
+                        Read more about the this on <a
+                            href="https://aronpetritz.iem.sh/intermedia-deterioration-machine/" target="_blank">its
+                            project page</a>!
+                        <br>Additionally, example conversions are shown below:
+                    </p>
+                </div>
+                <div style="align-items: center; flex: 1 1 27.5rem;">
+                    <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+                        <iframe width="960" height="720"
+                            src="https://www.youtube.com/embed/lCSSL3vRnxg?si=J-0h2zZwccT9CRk6"
+                            title="YouTube video player"
+                            style="margin-top: 1em; margin-bottom: -1em; max-width:100%; height:auto; aspect-ratio:16/9;"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
             <br>
             <div class="druckeridee">
                 <div>
